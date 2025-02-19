@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat en Temps Réel</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div  id="loginContainer">
+        <h2>Entrez votre pseudo :</h2>
+        <input type="text" id="username" placeholder="Votre pseudo">
+        <button onclick="setUsername()">Entrer</button>
+    </div>
+
+    <div id="chatContainer" class="hidden">
+        <h2>💬 Chat en Temps Réel</h2>
+        <button id="quitBtn" onclick="quitChat()">🚪 Quitter</button>
+        <div id="userList"></div>
+        <div id="messages"></div>
+        
+        <div class="input-container">
+            <input type="text" id="message" placeholder="Écris un message..." autocomplete="off">
+            <button id="emoji-btn">😀 Emoji</button>
+            <button onclick="sendMessage()">Envoyer</button>
+        </div>
+
+        <div id="emoji-picker" class="hidden"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='emoji-picker.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

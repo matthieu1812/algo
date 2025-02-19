@@ -1,0 +1,144 @@
+/* Remise à zéro des marges et du box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://wallpaperaccess.com/full/2579674.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 60px; /* Pour laisser de la place à la navbar fixe */
+}
+
+/* Barre de navigation */
+.navbar {
+    position: fixed;       /* Fixe la navbar en haut de la page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond noir transparent */
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.navbar nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;  /* Aligne les liens à droite */
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Icône et lien de messagerie */
+.message-link {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Espace à droite avant les autres liens */
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px; /* Espace entre l'icône et le texte */
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Container principal du formulaire */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px);
+}
+
+/* Bloc du formulaire */
+.login-form {
+    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc translucide */
+    border-radius: 8px;
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Titre du formulaire */
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Groupes de champs */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007BFF;
+}
+
+/* Bouton de connexion */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Adaptation aux écrans plus petits */
+@media (max-width: 600px) {
+    .navbar nav {
+        justify-content: center; /* Centre les liens sur mobile */
+    }
+
+    .navbar a {
+        margin: 0 10px;
+    }
+
+    .login-form {
+        width: 90%;
+        margin: 0 10px;
+    }
+}
+
+

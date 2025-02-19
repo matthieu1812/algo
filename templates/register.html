@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+</head>
+<body>
+
+    <header class="navbar">
+        <nav>
+            <a href="/">Accueil</a>
+         
+            <a href="#">À propos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="login-form">
+            <h2>Connexion</h2>
+
+            <form action="{{ url_for('register') }}" method="POST">
+                <div class="input-group">
+                    <label for="pseu">Pseudo</label>
+                    <input type="text" name="pseu" placeholder="Entrez votre pseudo" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="username">nom</label>
+                    <input type="text" name="username" placeholder="Entrez votre nom" required>
+                </div>
+
+
+                <div class="input-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="password" placeholder="Entrez votre mot de passe" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Se connecter</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
