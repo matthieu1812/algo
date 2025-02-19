@@ -72,7 +72,7 @@ def register():
         cursor = mysql.connection.cursor()
         cursor.execute('SELECT username,pseu, mot_de FROM creates WHERE pseu = %s', (pseudo,))
         ajout1 = cursor.fetchone()
-        if ajout1 is None:  
+        if ajout1:  
             return "Nom d'utilisateur déjà pris", 401
         else:
           
